@@ -9,21 +9,19 @@
 /* Begin PBXBuildFile section */
 		9E526C8E2A9746AF00BE62B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E526C8D2A9746AF00BE62B2 /* AppDelegate.swift */; };
 		9E526C902A9746AF00BE62B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E526C8F2A9746AF00BE62B2 /* SceneDelegate.swift */; };
-		9E526C922A9746AF00BE62B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E526C912A9746AF00BE62B2 /* ViewController.swift */; };
-		9E526C952A9746AF00BE62B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E526C932A9746AF00BE62B2 /* Main.storyboard */; };
 		9E526C972A9746B000BE62B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E526C962A9746B000BE62B2 /* Assets.xcassets */; };
 		9E526C9A2A9746B000BE62B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E526C982A9746B000BE62B2 /* LaunchScreen.storyboard */; };
+		9E526CA42A97487300BE62B2 /* CVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E526CA32A97487300BE62B2 /* CVViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9E526C8A2A9746AF00BE62B2 /* MyCVApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCVApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E526C8D2A9746AF00BE62B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E526C8F2A9746AF00BE62B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9E526C912A9746AF00BE62B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9E526C942A9746AF00BE62B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E526C962A9746B000BE62B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E526C992A9746B000BE62B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E526C9B2A9746B000BE62B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E526CA32A97487300BE62B2 /* CVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +54,38 @@
 		9E526C8C2A9746AF00BE62B2 /* MyCVApp */ = {
 			isa = PBXGroup;
 			children = (
+				9E526CA22A97485700BE62B2 /* CVScreen */,
+				9E526CA12A97480C00BE62B2 /* Application */,
+			);
+			path = MyCVApp;
+			sourceTree = "<group>";
+		};
+		9E526CA12A97480C00BE62B2 /* Application */ = {
+			isa = PBXGroup;
+			children = (
 				9E526C8D2A9746AF00BE62B2 /* AppDelegate.swift */,
 				9E526C8F2A9746AF00BE62B2 /* SceneDelegate.swift */,
-				9E526C912A9746AF00BE62B2 /* ViewController.swift */,
-				9E526C932A9746AF00BE62B2 /* Main.storyboard */,
 				9E526C962A9746B000BE62B2 /* Assets.xcassets */,
 				9E526C982A9746B000BE62B2 /* LaunchScreen.storyboard */,
 				9E526C9B2A9746B000BE62B2 /* Info.plist */,
 			);
-			path = MyCVApp;
+			path = Application;
+			sourceTree = "<group>";
+		};
+		9E526CA22A97485700BE62B2 /* CVScreen */ = {
+			isa = PBXGroup;
+			children = (
+				9E526CA52A97487A00BE62B2 /* View */,
+			);
+			path = CVScreen;
+			sourceTree = "<group>";
+		};
+		9E526CA52A97487A00BE62B2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9E526CA32A97487300BE62B2 /* CVViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +148,6 @@
 			files = (
 				9E526C9A2A9746B000BE62B2 /* LaunchScreen.storyboard in Resources */,
 				9E526C972A9746B000BE62B2 /* Assets.xcassets in Resources */,
-				9E526C952A9746AF00BE62B2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +158,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E526C922A9746AF00BE62B2 /* ViewController.swift in Sources */,
 				9E526C8E2A9746AF00BE62B2 /* AppDelegate.swift in Sources */,
+				9E526CA42A97487300BE62B2 /* CVViewController.swift in Sources */,
 				9E526C902A9746AF00BE62B2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +167,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9E526C932A9746AF00BE62B2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9E526C942A9746AF00BE62B2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9E526C982A9746B000BE62B2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -289,12 +301,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 25N2G3WWXF;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyCVApp/Info.plist;
+				INFOPLIST_FILE = MyCVApp/Application/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +314,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Smirnoff.MyCVApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,12 +332,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 25N2G3WWXF;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyCVApp/Info.plist;
+				INFOPLIST_FILE = MyCVApp/Application/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +345,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Smirnoff.MyCVApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

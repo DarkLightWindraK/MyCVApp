@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  MyCVApp
-//
-//  Created by Антон Смирнов on 24.08.2023.
-//
-
 import UIKit
 
 @main
