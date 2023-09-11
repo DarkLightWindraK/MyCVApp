@@ -12,12 +12,15 @@ class SkillViewCell: UICollectionViewCell {
         button.setImage(Constants.deleteButtonImage, for: .normal)
         button.imageView?.tintColor = .black
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(didDeleteTapped), for: .touchUpInside)
         return button
     }()
     
     private var maxCellWidth: NSLayoutConstraint?
     private var labelRightConstraint: NSLayoutConstraint?
     private var labelRightToButton: NSLayoutConstraint?
+    
+    private var onDeleteButtonTapped: (() -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -28,16 +31,26 @@ class SkillViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(skill: String, maxWidth: CGFloat, isEditing: Bool) {
+    func configure(
+        skill: String,
+        maxWidth: CGFloat,
+        isEditing: Bool,
+        onDeleteTapped: (() -> Void)?
+    ) {
         skillName.text = skill
         deleteButton.isHidden = !isEditing
         labelRightConstraint?.isActive = !isEditing
         labelRightToButton?.isActive = isEditing
         maxCellWidth?.constant = maxWidth
+        onDeleteButtonTapped = onDeleteTapped
     }
 }
 
 private extension SkillViewCell {
+    @objc func didDeleteTapped() {
+        onDeleteButtonTapped?()
+    }
+    
     func setupCell() {
         backgroundColor = Constants.backgroundColor
         layer.cornerRadius = Constants.cornerRadius

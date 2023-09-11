@@ -98,7 +98,11 @@ extension CVViewController: UICollectionViewDataSource {
             maxWidth: collectionView.bounds.width
             - Constants.sectionInset.leading
             - Constants.sectionInset.trailing,
-            isEditing: collectionView.isEditing
+            isEditing: collectionView.isEditing,
+            onDeleteTapped: ({ [weak self] in
+                TestData.skills.remove(at: indexPath.row)
+                self?.infoCollectionView.reloadData()
+            })
         )
         return cell
     }
@@ -151,7 +155,7 @@ private extension CVViewController {
     }
     
     enum TestData {
-        static let skills = ["UIKit", "SwiftUI", "Combine", "Compositional Layout", "URLSession", "MVVM", "Redux"]
+        static var skills = ["UIKit", "SwiftUI", "Combine", "Compositional Layout", "URLSession", "MVVM", "Redux"]
     }
     
     func setupViews() {
@@ -232,7 +236,7 @@ private extension CVViewController {
             alignment: .top
         )
     }
-
+    
     func makeFooterView() -> NSCollectionLayoutBoundarySupplementaryItem {
         .init(
             layoutSize: .init(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(64)),
