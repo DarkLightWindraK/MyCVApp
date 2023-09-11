@@ -61,7 +61,6 @@ class CVViewController: UIViewController {
             frame: .zero,
             collectionViewLayout: makeCollectionViewLayout()
         )
-        collectionView.isScrollEnabled = false
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
     }()
@@ -97,10 +96,9 @@ extension CVViewController: UICollectionViewDataSource {
         cell.configure(
             skill: TestData.skills[indexPath.row],
             maxWidth: collectionView.bounds.width
-            - SkillViewCell.Constants.contentInsets.left
-            - SkillViewCell.Constants.contentInsets.right
             - Constants.sectionInset.leading
-            - Constants.sectionInset.trailing
+            - Constants.sectionInset.trailing,
+            isEditing: collectionView.isEditing
         )
         return cell
     }
@@ -112,11 +110,20 @@ extension CVViewController: UICollectionViewDataSource {
     ) -> UICollectionReusableView {
         switch kind {
         case UICollectionView.elementKindSectionHeader:
-            return collectionView.dequeueReusableSupplementaryView(
+            guard let header = collectionView.dequeueReusableSupplementaryView(
                 ofKind: kind,
                 withReuseIdentifier: "\(SkillsHeaderView.self)",
                 for: indexPath
-            )
+            ) as? SkillsHeaderView
+            else {
+                return UICollectionReusableView()
+            }
+            
+            header.configure { [weak self] isEditing in
+                self?.infoCollectionView.isEditing = isEditing
+                self?.infoCollectionView.reloadData()
+            }
+            return header
         case UICollectionView.elementKindSectionFooter:
             return collectionView.dequeueReusableSupplementaryView(
                 ofKind: kind,

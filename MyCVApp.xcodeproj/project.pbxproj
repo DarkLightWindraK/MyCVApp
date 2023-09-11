@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E4611862AA3E2E400C06295 /* ProfileInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4611852AA3E2E400C06295 /* ProfileInfoService.swift */; };
 		9E526C8E2A9746AF00BE62B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E526C8D2A9746AF00BE62B2 /* AppDelegate.swift */; };
 		9E526C902A9746AF00BE62B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E526C8F2A9746AF00BE62B2 /* SceneDelegate.swift */; };
 		9E526C972A9746B000BE62B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E526C962A9746B000BE62B2 /* Assets.xcassets */; };
 		9E526C9A2A9746B000BE62B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E526C982A9746B000BE62B2 /* LaunchScreen.storyboard */; };
 		9E526CA42A97487300BE62B2 /* CVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E526CA32A97487300BE62B2 /* CVViewController.swift */; };
 		9E76DD4C2A9E263A001D66C9 /* SkillViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E76DD4B2A9E263A001D66C9 /* SkillViewCell.swift */; };
-		9E7737C62A9E8305002BC8C8 /* HeaderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7737C52A9E8305002BC8C8 /* HeaderViewCell.swift */; };
-		9E8CBB5A2AA07F4F0080C436 /* AboutViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8CBB592AA07F4F0080C436 /* AboutViewCell.swift */; };
+		9E7737C62A9E8305002BC8C8 /* SkillsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7737C52A9E8305002BC8C8 /* SkillsHeaderView.swift */; };
+		9E8CBB5A2AA07F4F0080C436 /* SkillsFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8CBB592AA07F4F0080C436 /* SkillsFooterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E4611852AA3E2E400C06295 /* ProfileInfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoService.swift; sourceTree = "<group>"; };
 		9E526C8A2A9746AF00BE62B2 /* MyCVApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCVApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E526C8D2A9746AF00BE62B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E526C8F2A9746AF00BE62B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,8 +28,8 @@
 		9E526C9B2A9746B000BE62B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E526CA32A97487300BE62B2 /* CVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVViewController.swift; sourceTree = "<group>"; };
 		9E76DD4B2A9E263A001D66C9 /* SkillViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillViewCell.swift; sourceTree = "<group>"; };
-		9E7737C52A9E8305002BC8C8 /* HeaderViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewCell.swift; sourceTree = "<group>"; };
-		9E8CBB592AA07F4F0080C436 /* AboutViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewCell.swift; sourceTree = "<group>"; };
+		9E7737C52A9E8305002BC8C8 /* SkillsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsHeaderView.swift; sourceTree = "<group>"; };
+		9E8CBB592AA07F4F0080C436 /* SkillsFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsFooterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,7 @@
 		9E4611822AA3622C00C06295 /* Header */ = {
 			isa = PBXGroup;
 			children = (
-				9E7737C52A9E8305002BC8C8 /* HeaderViewCell.swift */,
+				9E7737C52A9E8305002BC8C8 /* SkillsHeaderView.swift */,
 			);
 			path = Header;
 			sourceTree = "<group>";
@@ -60,9 +62,17 @@
 		9E4611832AA3626300C06295 /* Footer */ = {
 			isa = PBXGroup;
 			children = (
-				9E8CBB592AA07F4F0080C436 /* AboutViewCell.swift */,
+				9E8CBB592AA07F4F0080C436 /* SkillsFooterView.swift */,
 			);
 			path = Footer;
+			sourceTree = "<group>";
+		};
+		9E4611842AA3E2CD00C06295 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9E4611852AA3E2E400C06295 /* ProfileInfoService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		9E526C812A9746AF00BE62B2 = {
@@ -84,6 +94,7 @@
 		9E526C8C2A9746AF00BE62B2 /* MyCVApp */ = {
 			isa = PBXGroup;
 			children = (
+				9E4611842AA3E2CD00C06295 /* Services */,
 				9E526CA22A97485700BE62B2 /* CVScreen */,
 				9E526CA12A97480C00BE62B2 /* Application */,
 			);
@@ -192,10 +203,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E76DD4C2A9E263A001D66C9 /* SkillViewCell.swift in Sources */,
-				9E8CBB5A2AA07F4F0080C436 /* AboutViewCell.swift in Sources */,
+				9E8CBB5A2AA07F4F0080C436 /* SkillsFooterView.swift in Sources */,
 				9E526C8E2A9746AF00BE62B2 /* AppDelegate.swift in Sources */,
-				9E7737C62A9E8305002BC8C8 /* HeaderViewCell.swift in Sources */,
+				9E7737C62A9E8305002BC8C8 /* SkillsHeaderView.swift in Sources */,
 				9E526CA42A97487300BE62B2 /* CVViewController.swift in Sources */,
+				9E4611862AA3E2E400C06295 /* ProfileInfoService.swift in Sources */,
 				9E526C902A9746AF00BE62B2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

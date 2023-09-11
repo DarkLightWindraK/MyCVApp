@@ -14,8 +14,12 @@ class SkillsHeaderView: UICollectionReusableView {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(Constants.editButtonImage, for: .normal)
+        button.setImage(Constants.doneButtonImage, for: .selected)
+        button.addTarget(self, action: #selector(didEditButtonTap), for: .touchUpInside)
         return button
     }()
+    
+    private var onEditButtonTap: ((Bool) -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,9 +29,20 @@ class SkillsHeaderView: UICollectionReusableView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func configure(
+        onEditButtonTap: ((Bool) -> Void)?
+    ) {
+        self.onEditButtonTap = onEditButtonTap
+    }
 }
 
 private extension SkillsHeaderView {
+    
+    @objc func didEditButtonTap() {
+        editButton.isSelected.toggle()
+        onEditButtonTap?(editButton.isSelected)
+    }
     
     func setupConstraints() {
         addSubview(skillsLabel)
@@ -49,6 +64,7 @@ private extension SkillsHeaderView {
     enum Constants {
         static let skillsLabelText = "Мои навыки"
         static let editButtonImage = UIImage(named: "edit_button")
+        static let doneButtonImage = UIImage(named: "done_button")
         static let textFont = UIFont.systemFont(ofSize: 17, weight: .medium)
     }
 }
